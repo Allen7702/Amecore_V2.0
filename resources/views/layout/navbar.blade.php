@@ -26,6 +26,8 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+
 
     <!-- JQuery Library -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -34,8 +36,9 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="js/readmore.js"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="js/WOW.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/wow.min.js"></script>
+
 
 
 </head>

@@ -24,7 +24,7 @@
                     <h1 class=" mb-0 text-setting-about-1 nunito">The Best IT Solution With 10 Years of Experience</h1>
                 </div>
                 <p class="mb-4 text-setting-about-2">Having 10 years of experience in the IT industry is a significant accomplishment. It demonstrates that the company has had the opportunity to develop and refine its skills, knowledge, and expertise in the field.
-                 <br> With such a wealth of experience, the company is likely to have encountered and overcome a wide range of challenges, which has helped it to develop robust and effective solutions for its clients. This level of experience can also help the company to be more agile and adaptable to changes in the IT landscape, as it has likely seen many changes and trends come and go over the years.</p>
+                 <br> With such a wealth of experience, the company is likely to have encountered and overcome a wide range of challenges, which has helped it to develop robust and effective solutions for its clients. .</p>
             <div class="row py-2">
                 <div class="col-6">
                     <div class="d-flex align-items-center mb-4 wow zoomIn" data-wow-delay="0.2s">

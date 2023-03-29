@@ -2,7 +2,7 @@
 
 @section('content')
     <!--Head section -->
-<div class="container-fluid  py-5 bg-header" style="margin-bottom: 90px;background:url(img/camerax.jpg) center center no-repeat;height:35rem;">
+<div class="container-fluid  py-5 bg-header" style="margin-bottom:40px;background:url(img/camerax.jpg) center center no-repeat;height:35rem;">
    <div class="row py-5 ">
        <div class="col-12 pt-lg-5 mt-lg-5 text-center ">
            <h1 class="display-4 text-white animated zoomIn nunito">Services</h1>
@@ -16,7 +16,7 @@
     <!-- Detail Start -->
    <div style="padding-left:170px;">
    <div class=" text-left ">
-    <h1 class="mb-3 text-setting-solution-1 nunito"><span class="text-primary">Products </span>and solutions</h1>
+    <h1 class="text-setting-solution-1 nunito text-center" style="margin-bottom:30px;"><span class="text-primary">Products </span>and solutions</h1>
     </div>
                     
    <h2> DEVELOPMENT AND INTEGRATION OF API's</h2>

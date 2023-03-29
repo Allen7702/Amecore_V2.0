@@ -9,19 +9,19 @@ use App\Models\booking;
 class HomeController extends Controller
 {
     public function home(){
-        return view('home');
+        return view('amecore.home');
     }
 
     public function contact(){
-        return view('contact');
+        return view('amecore.contact');
     }
 
     public function about(){
-        return view('about');
+        return view('amecore.about');
     }
 
     public function solution(){
-        return view('solution');
+        return view('amecore.solution');
     }
 
     public function homedb(){

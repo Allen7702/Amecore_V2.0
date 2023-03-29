@@ -1,11 +1,16 @@
 @charset "UTF-8";
 
-
+/*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.5.2
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2017 Daniel Eden
+ */
 
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
-  animation-delay: 1s;
 }
 
 .animated.infinite {
@@ -63,6 +68,7 @@
   animation-name: flash;
 }
 
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @keyframes pulse {
   from {
@@ -218,6 +224,7 @@
   animation-name: tada;
 }
 
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @keyframes wobble {
   from {
@@ -1238,6 +1245,7 @@
   animation-name: jackInTheBox;
 }
 
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @keyframes rollIn {
   from {
@@ -1255,6 +1263,7 @@
   animation-name: rollIn;
 }
 
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @keyframes rollOut {
   from {
@@ -1568,22 +1577,3 @@
 .slideOutUp {
   animation-name: slideOutUp;
 }
-
-.slide-animation{
-  animation-name: slide-up;
-  animation-duration: 2s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-@keyframes slide-up {
-  from {
-      transform: translateY(100%);
-      opacity: 0;
-  }
-  to {
-      transform: translateY(0);
-      opacity: 1;
-  }
-}
-

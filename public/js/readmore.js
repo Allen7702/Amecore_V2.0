@@ -15,12 +15,12 @@ function toggleText(link) {
   const text = link.previousElementSibling;
   if (text.style.display === 'none') {
     text.style.display = 'inline';
-    container.style.height = '375px';
+    container.style.height = '350px';
     link.textContent = 'Read Less';
   } else {
     text.style.display = 'none';
-    text.style.height = '300px';
-    container.style.height = '300px';
+    text.style.height = '350px';
+    container.style.height = '350px';
     link.textContent = 'Read More';
   }
 }
