@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-
-use Illuminate\Http\Request;
 use App\Models\booking;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+
     public function home(){
         return view('amecore.home');
     }
@@ -22,6 +22,10 @@ class HomeController extends Controller
 
     public function solution(){
         return view('amecore.solution');
+    }
+
+    public function dashboard(){
+        return view('auth.dashboard');
     }
 
     public function homedb(){
