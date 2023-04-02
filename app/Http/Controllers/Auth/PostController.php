@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\category;
+use App\Models\gallery;
+use App\Models\post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -30,7 +32,69 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+     
+        
+
+    
+        if($request->hasFile('file')){
+            $file = $request->file('file');
+            $fileName =time(). $file->getClientOriginalName();
+            $imagePath = public_path('images');
+            $file->move($imagePath, $fileName );
+
+            $gallery = gallery::create([
+                'image' => $fileName 
+            ]);
+
+        }
+        post::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'category_id' => $request->category,
+            'gallery_id' =>  $gallery->id 
+        ]);
+   
+
+        return 'success';
+
+        /*
+       if($request->hasFile('file')){
+            $file = $request->file('file');
+            $fileName = $file->getClientOriginalName();
+            $file->storeAs('public/images', $fileName);
+           // $filename = time(). $file->getClientOriginalName();
+           // $imagePath = public_path(). 'images/posts/';
+            //$file->store($imagePath);
+           // dd($imagePath);
+
+
+         $gallery = gallery::create([
+                'image' => $fileName 
+         ]);
+
+         post::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'category_id' => $request->category,
+            'gallery_id' => $gallery->id,
+        ]);
+        return 'success';
+       }
+       else{
+        post::create([
+                'title' => $request->title,
+                'description' => $request->description,
+                'category_id' => $request->category,
+                 'gallery_id' => $gallery->id,
+            ]);
+            
+        return 'success';
+       }
+       */ 
+
+       
+      
     }
 
     /**

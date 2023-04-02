@@ -13,26 +13,27 @@
       <div class="card-body">
         <h4 class="card-title">Basic form elements</h4>
         <p class="card-description"> Basic form elements </p>
-        <form class="forms-sample">
+        <form method="post" action="{{route('post.store')}}" class="forms-sample">
+          @csrf
           <div class="form-group">
-            <label for="exampleInputName1">Name</label>
-            <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+            <label for="exampleInputName1">Title</label>
+            <input type="text" name="title" class="form-control" id="exampleInputName1" placeholder="Name" value="{{old('title')}}">
           </div>
-          <div class="form-group">
+          {{-- <div class="form-group">
             <label for="exampleInputEmail3">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword4">Password</label>
             <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
-          </div>
+          </div> --}}
           <div class="form-group">
             <label for="exampleSelectGender">Category
             </label>
             <select class="form-control" name="category" id="exampleSelectGender">
               @if(count($categories)>0)
               @foreach($categories as $category)
-                <option value="{{$category->id}}">{{$category->name}}</option>
+                <option @selected(old('category') == $category->id ) value="{{$category->id}}">{{$category->name}}</option>
                 @endforeach
               @endif
             </select>
@@ -42,13 +43,13 @@
             <input type="file" name="file" class="form-control ">
           </div>
           
-          <div class="form-group">
+          {{-- <div class="form-group">
             <label for="exampleInputCity1">City</label>
             <input type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
-          </div>
+          </div> --}}
           <div class="form-group">
             <label for="exampleTextarea1">Description</label>
-            <textarea class="form-control" id="summernote" name="description" rows="4" cols="36"></textarea>
+            <textarea class="form-control" id="summernote" name="description" rows="4" cols="36"> {{old('description')}}</textarea>
           </div>
           <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
           <button class="btn btn-light">Cancel</button>
