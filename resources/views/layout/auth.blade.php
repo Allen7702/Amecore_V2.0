@@ -19,6 +19,8 @@
     @yield('styles')
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
   </head>
   <body>
     <div class="container-scroller">
@@ -318,6 +320,21 @@
          $('#logout-form').submit();
            });
          });
+          </script>
+
+          <script>
+            @if(Session::has('alert-success'))
+            swal("good job","{{Session::get('alert-success')}}", "success");
+            @endif
+
+            @if(Session::has('alert-update'))
+            swal("good job","{{Session::get('alert-update')}}", "info");
+           @endif
+
+           @if(Session::has('alert-danger'))
+           swal("good job","{{Session::get('alert-danger')}}", "error");
+           @endif
+            
           </script>
       </body>
     </html>

@@ -7,6 +7,7 @@ use App\Models\category;
 use App\Models\gallery;
 use App\Models\post;
 use Illuminate\Http\Request;
+use Psy\Readline\Hoa\Console;
 
 class PostController extends Controller
 {
@@ -15,6 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
+        return view('auth.posts.index');
     }
 
     /**
@@ -33,30 +35,64 @@ class PostController extends Controller
     public function store(Request $request)
     {
 
-     
-        
+       /* $request->validate([
+            'title' => 'required',
+             'description' => 'required',
+             'category' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);  
+*/
+        $gallery = new Gallery;
 
-    
-        if($request->hasFile('file')){
-            $file = $request->file('file');
-            $fileName =time(). $file->getClientOriginalName();
-            $imagePath = public_path('images');
-            $file->move($imagePath, $fileName );
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $name = time().'.'.$image->getClientOriginalName();
+            $destinationPath = public_path('/images');
+            $image->move($destinationPath, $name);
+            $gallery->image = $name;
+        }
+
+        $gallery->save();
+
+        $post = new Post;
+
+        $post->category_id = $request->category;
+        $post->title = $request->title;
+        $post->description = $request->description;
+        $post->gallery_id = $gallery->id;
+
+        $post->save();
+         
+        $request->session()->flash('alert-success','post created sussecfully');
+        return to_route('post.index');
+        // return redirect()->route('posts.create');
+        // return 'success';
+       /* $image = $request->image;
+        if($image) {
+            $extention = $image->getClientOriginalExtension();
+            $imageName = time(). '.'.$extention;
+            $image->move(public_path('images'), $imageName);
 
             $gallery = gallery::create([
-                'image' => $fileName 
-            ]);
-
+                'image' => $imageName
+         ]);
         }
-        post::create([
+
+        Post::create([
+            'category_id' => $request->category,
             'title' => $request->title,
             'description' => $request->description,
-            'category_id' => $request->category,
-            'gallery_id' =>  $gallery->id 
-        ]);
-   
+            'is_publish' => $request->is_publish,
+            'status' => 0,
+            'gallery_id' => $gallery->id,
 
-        return 'success';
+        ]);
+
+        return $request->all();
+*/
+
+
+
 
         /*
        if($request->hasFile('file')){
@@ -68,6 +104,7 @@ class PostController extends Controller
             //$file->store($imagePath);
            // dd($imagePath);
 
+            'gallery_id' => $request->image ? $imageName:intval('0')
 
          $gallery = gallery::create([
                 'image' => $fileName 
