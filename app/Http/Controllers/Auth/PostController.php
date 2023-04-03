@@ -16,7 +16,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('auth.posts.index');
+        $posts = post::with(['gallery','category'])->get();
+        return view('auth.posts.index',['posts'=>$posts]);
     }
 
     /**
@@ -65,6 +66,8 @@ class PostController extends Controller
          
         $request->session()->flash('alert-success','post created sussecfully');
         return to_route('post.index');
+
+
         // return redirect()->route('posts.create');
         // return 'success';
        /* $image = $request->image;

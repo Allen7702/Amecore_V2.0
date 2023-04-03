@@ -9,4 +9,12 @@ class post extends Model
 {
     use HasFactory;
     protected $fillable =['category_id','gallery_id','title','description','is_published'];
+
+    public function category(){
+        return $this->belongsTo(category::class);
+    }
+
+    public function gallery(){
+        return $this->belongsTo(gallery::class);
+    } 
 }
