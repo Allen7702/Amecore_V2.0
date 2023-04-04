@@ -2,7 +2,7 @@
 
 @section('content')
 <!--Head section -->
-<div class="container-fluid  py-5 bg-header" style="margin-bottom: 90px;background:url(img/camerax.jpg) center center no-repeat;height:35rem;">
+<div class="container-fluid  py-5 bg-header" style="margin-bottom: 90px;background:url({{asset('website/img/camerax.jpg')}}) center center no-repeat;height:35rem;">
     <div class="row py-5 ">
         <div class="col-12 pt-lg-5 mt-lg-5 text-center ">
             <h1 class="display-4 text-white animated zoomIn nunito">About Us</h1>
@@ -28,25 +28,25 @@
             <div class="row py-2">
                 <div class="col-6">
                     <div class="d-flex align-items-center mb-4 wow zoomIn" data-wow-delay="0.2s">
-                        <h1><img  class="hetero" src="icons/best-seller.png"></h1>
+                        <h1><img  class="hetero" src="{{asset('website/icons/best-seller.png')}}"></h1>
                         <h5 class="text-truncate m-0">Best In Industry</h5>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="d-flex align-items-center mb-4 wow zoomIn " data-wow-delay="0.2s">
-                        <h1><img  class="hetero" src="icons/solution (1).png"></h1>
+                        <h1><img  class="hetero" src="{{asset('website/icons/solution (1).png')}}"></h1>
                         <h5 class="text-truncate m-0">Effective Solutions</h5>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="d-flex align-items-center wow zoomIn" data-wow-delay="0.4s">
-                        <h1><img  class="hetero" src="icons/24-hours-support.png"></h1>
+                        <h1><img  class="hetero" src="{{asset('website/icons/24-hours-support.png')}}"></h1>
                         <h5 class="text-truncate m-0">Reliable Services</h5>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="d-flex align-items-center wow zoomIn" data-wow-delay="0.4s">
-                        <h1><img  class="hetero" src="icons/customer-service.png"></h1>
+                        <h1><img  class="hetero" src="{{asset('website/icons/customer-service.png')}}"></h1>
                         <h5 class="text-truncate m-0" id="book">Customer Support</h5>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
             </div>
             <div >
                
-                    <img class="image-setting  wow zoomIn" data-wow-delay="0.9s" src="img/solution.jpg" style="object-fit: cover;">
+                    <img class="image-setting  wow zoomIn" data-wow-delay="0.9s" src="{{asset('website/img/solution.jpg')}}" style="object-fit: cover;">
                 
             </div>
         </div>

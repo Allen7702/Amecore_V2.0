@@ -2,7 +2,7 @@
 
 @section('content')
     <!--Head section -->
-<div class="container-fluid  py-5 bg-header" style="margin-bottom:40px;background:url(img/camerax.jpg) center center no-repeat;height:35rem;">
+<div class="container-fluid  py-5 bg-header" style="margin-bottom:40px;background:url({{asset('website/img/camerax.jpg')}}) center center no-repeat;height:35rem;">
    <div class="row py-5 ">
        <div class="col-12 pt-lg-5 mt-lg-5 text-center ">
            <h1 class="display-4 text-white animated zoomIn nunito">Services</h1>
@@ -32,14 +32,14 @@
          </ul>
        </div>
       <div>
-         <img class="image-setting  wow zoomIn" data-wow-delay="0.2s" src="img/solution.jpg" style="object-fit: cover;">
+         <img class="image-setting  wow zoomIn" data-wow-delay="0.2s" src="{{asset('website/img/api.jpg')}}" style="object-fit: cover;">
       </div>
    </div> 
    
    <h2 class="mb-4">CUSTOMIZABLE ENTERPRISE SERVICE BUS</h2>
    <div class="flex-container mb-6" style="max-width:90%;justify-content: space-evenly;">
       <div> 
-         <img class="image-setting  wow zoomIn" data-wow-delay="0.2s" src="img/solution.jpg" style="object-fit: cover;">
+         <img class="image-setting  wow zoomIn" data-wow-delay="0.2s" src="{{asset('website/img/cyber2.jpg')}}" style="object-fit: cover;">
       </div> 
       <div>
          <ul class="list-inline list-setting ml-5">
@@ -70,7 +70,7 @@
          </ul>
        </div>
       <div>
-         <img class="image-setting  wow zoomIn" data-wow-delay="0.2s" src="img/solution.jpg" style="object-fit: cover;margin-top:100px;">
+         <img class="image-setting  wow zoomIn" data-wow-delay="0.2s" src="{{asset('website/img/saton.webp')}}" style="object-fit: cover;margin-top:100px;">
       </div>
    </div> 
    

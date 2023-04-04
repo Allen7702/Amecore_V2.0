@@ -6,7 +6,7 @@
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100  vh-100 "  src="img/camerax2.jpg" alt="Image">
+                    <img class="w-100  vh-100 "  src="{{asset('website/img/camerax2.jpg')}}" alt="Image">
                     <div class="carousel-caption d-flex flex-column  justify-content-center">
                         <div class="pp-3 slide-animation" style="max-width: 900px;">
                             <h1 class="display-3 text-white mb-3 nunito" ><span class="text-primary">CCTV</span> Camera Installation Services </h1>
@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100 vh-100 " src="img/customerx.jpg" alt="Image">
+                    <img class="w-100 vh-100 " src="{{asset('website/img/customerx.jpg')}}" alt="Image">
                     <div class="carousel-caption d-flex flex-column  justify-content-center">
                         <div class="pp-3 slide-animation" style="max-width: 900px;">
                             <h1 class="display-3 text-white mb-3 nunito"><span class="text-primary">Customer</span>-Centric Solutions</h1>
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                   <div class="carousel-item">
-                    <img class="w-100 vh-100 " src="img/cyberx.jpg" alt="Image">
+                    <img class="w-100 vh-100 " src="{{asset('website/img/cyberx.jpg')}}" alt="Image">
                     <div class="carousel-caption d-flex flex-column justify-content-center">
                         <div class="pp-3 slide-animation" style="max-width: 900px;">
                             <h1 class="display-3 text-white mb-3 nunito"><span class="text-primary">Security</span> Consultation on Cyber Security</h1>
@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100 vh-100 " src="img/lanx.jpg" alt="Image">
+                    <img class="w-100 vh-100 " src="{{asset('website/img/lanx.jpg')}}" alt="Image">
                     <div class="carousel-caption d-flex flex-column justify-content-center">
                         <div class="pp-3 slide-animation" style="max-width: 900px;">
                             <h1 class="display-3 text-white mb-3 nunito"><span class="text-primary">Local Area</span> Network LAN Installation</h1>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100 vh-100 " src="img/telecom.jpg" alt="Image">
+                    <img class="w-100 vh-100 " src="{{asset('website/img/telecom.jpg')}}" alt="Image">
                     <div class="carousel-caption d-flex flex-column justify-content-center">
                         <div class="pp-3 slide-animation" style="max-width: 900px;">
                             <h1 class="display-3 text-white mb-3 nunito"><span class="text-primary">Telecom</span>munication Systems Installation</h1>
@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100 vh-100 " src="img/soft.jpeg" alt="Image">
+                    <img class="w-100 vh-100 " src="{{asset('website/img/soft.jpeg')}}" alt="Image">
                     <div class="carousel-caption d-flex flex-column  justify-content-center">
                         <div class="pp-3 slide-animation" style="max-width: 900px;">
                             <h1 class="display-3 text-white mb-3 manrope"><span class="text-primary">Software</span> Design for Web Applications</h1>
@@ -95,7 +95,7 @@
             </div>
             <div class="flex-item-2 ">
                 
-                        <img class="image-setting" src="img/net.jpg" alt="">
+                        <img class="image-setting" src="{{asset('website/img/net.jpg')}}" alt="">
             </div>
         </div>
    
@@ -117,7 +117,7 @@
             <div class="flex-container-1 ">
                 <div class=" mb-4 mr-5" >
                     <div class="d-flex flex-column text-center bg-white mb-2 pp-3 p-sm-5 ball-item" >
-                        <h3 class="mt-4"><img  class="hetero" src="icons/cctv (4).png"></h3> 
+                        <h3 class="mt-4"><img  class="hetero" src="{{asset('website/icons/cctv (4).png')}}"></h3> 
                         <h3 class="mb-3">CCTV Installation</h3>
                         <p> Installing a CCTV system involves setting up surveillance cameras in strategic locations, connecting them to a central monitoring system, configuring the system settings, and thoroughly testing the system, and it is recommended to hire a professional installation service for proper installation!</p>
                         {{-- <a class="text-uppercase font-weight-bold" href="#"  onclick="toggleText(this); return false;">Read More</a> --}}
@@ -125,7 +125,7 @@
                 </div>
                 <div class=" mb-4 mr-5">
                     <div class="d-flex flex-column text-center bg-white mb-2 pp-3 p-sm-4 ball-item" >
-                        <h3 class="mt-4"><img  class="hetero" src="icons/puzzle.png"></h3> 
+                        <h3 class="mt-4"><img  class="hetero" src="{{asset('website/icons/puzzle.png')}}"></h3> 
                         <h3 class="mb-3">Customer-Centric Solutions</h3>
                         <p >Developing customer-centric solutions involves prioritizing the customer's experience and satisfaction, and creating strategies, and processes that are tailored to meet their needs, ultimately improving customer loyalty and differentiation from competitors.!</p>
                         {{-- <a class="text-uppercase font-weight-bold" href="javascript:void(0);" onclick="toggleText(this); return false;" >Read More</a> --}}
@@ -133,7 +133,7 @@
                 </div>
                 <div class=" mb-4 mr-5">
                     <div class="d-flex flex-column text-center bg-white mb-2 pp-3 p-sm-5 ball-item" >
-                        <h3 class="mt-4"><img  class="hetero" src="icons/cyber-security (2).png"></h3>                         
+                        <h3 class="mt-4"><img  class="hetero" src="{{asset('website/icons/working.png')}}"></h3>                         
                         <h3 class="mb-3">Cybersecurity Consultations</h3>
                         <p >Cybersecurity consultations involve a comprehensive evaluation of an organization's cybersecurity posture, identifying vulnerabilities and risks, and recommending solutions to prevent cyber threats and ultimately helping organizations establish an effective cybersecurity strategy.!</p>
                     </div>
@@ -142,21 +142,21 @@
             <div class="flex-container-1">
                 <div class=" mb-4 mr-5">
                     <div class="d-flex flex-column text-center bg-white mb-2 pp-3 p-sm-5 ball-item" >
-                        <h3 class="mt-4"><img  class="hetero" src="icons/lan (4).png"></h3>                         
+                        <h3 class="mt-4"><img  class="hetero" src="{{asset('website/icons/lan (4).png')}}"></h3>                         
                         <h3 class="mb-3">LAN Installation</h3>
                         <p>LAN installation is the process of setting up a local area network, connecting multiple devices and enabling them to share resources and communicate with each other.!</p>
                     </div>
                 </div>
                 <div class=" mb-4 mr-5">
                     <div class="d-flex flex-column  bg-white mb-2 pp-3 ball-item p-sm-5" >
-                        <h3 class= "text-center mt-4"><img  class="hetero " src="icons/antenna (1).png "></h3>                         
+                        <h3 class= "text-center mt-4"><img  class="hetero " src="{{asset('website/icons/antenna (1).png')}} "></h3>                         
                         <h3 class="mb-3" style="text-align:center;">Telecommunication</h3>
                         <p class="text-center p-sm-2"  >Telecommunication refers to the exchange of information over a distance, using various technologies such as telephones, radios, and the internet!</p>
                     </div>
                 </div>
                 <div class=" mb-4 mr-5">
                     <div class="d-flex flex-column text-center bg-white mb-2 pp-3 p-sm-5 ball-item" >
-                        <h3 class="mt-4"><img  class="hetero" src="icons/software-development.png"></h3>                         
+                        <h3 class="mt-4"><img  class="hetero" src="{{asset('website/icons/software-development.png')}}"></h3>                         
                         <h3 class="mb-3">Software Design</h3>
                         <p >Software design is the process of conceptualizing and planning the structure, functionality, and behavior of a software system to meet specific requirements and objectives!</p>
                     </div>
@@ -170,10 +170,10 @@
 
     <!-- Features Start -->
    
-    <div class="container mt-4 mb-4 " style="background-color: rgb(255, 255, 255) !important;max-width:100%;">
+    <div class="container mt-4 mb-4 "  style="background:url({{asset('website/img/screen.jpg')}}) !important;max-width:100%;">
         <div class="row align-items-center">
             <div class="col-lg-5">
-                <img class="img-fluid w-75" src="img/amec.png" alt="">
+                <img class="img-fluid w-75 " style="opacity: 0.8;" src="{{asset('website/img/amec.png')}}" alt="">
             </div>
             <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5 ">
                 <h4 class="text-secondary mb-3">Why Choose Us?</h4>
@@ -182,25 +182,25 @@
                 <div class="row py-2">
                     <div class="col-6">
                         <div class="d-flex align-items-center mb-4">
-                            <h1><img  class="hetero" src="icons/best-seller.png"></h1>
+                            <h1><img  class="hetero" src="{{asset('website/icons/best-seller.png')}}"></h1>
                             <h5 class="text-truncate m-0">Best In Industry</h5>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="d-flex align-items-center mb-4">
-                            <h1><img  class="hetero" src="icons/solution (1).png"></h1>
+                            <h1><img  class="hetero" src="{{asset('website/icons/solution (1).png')}}"></h1>
                             <h5 class="text-truncate m-0">Effective Solutions</h5>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="d-flex align-items-center">
-                            <h1><img  class="hetero" src="icons/24-hours-support.png"></h1>
+                            <h1><img  class="hetero" src="{{asset('website/icons/24-hours-support.png')}}"></h1>
                             <h5 class="text-truncate m-0">Reliable Services</h5>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="d-flex align-items-center">
-                            <h1><img  class="hetero" src="icons/customer-service.png"></h1>
+                            <h1><img  class="hetero" src="{{asset('website/icons/customer-service.png')}}"></h1>
                             <h5 class="text-truncate m-0" id="book">Customer Support</h5>
                         </div>
                     </div>
@@ -270,7 +270,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex flex-column">
                                 <div class="d-flex align-items-center mb-2">
-                                    <h1><img  class="hetero" src="icons/working.png"></h1> 
+                                    <h1><img  class="hetero" src="{{asset('website/icons/working.png')}}"></h1> 
                                     <h5 class="text-truncate m-0 text-setting-about1-2">Consultation</h5>
                                 </div>
                                 <p class="text-setting-about1-2">Tailored end-to-end solutions to transform your business</p>
@@ -279,7 +279,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex flex-column">
                                 <div class="d-flex align-items-center mb-2">
-                                    <h1><img  class="hetero" src="icons/wrench.png"></h1> 
+                                    <h1><img  class="hetero" src="{{asset('website/icons/wrench.png')}}"></h1> 
                                     <h5 class="text-truncate m-0 text-setting-about1-2">Installation</h5>
                                 </div>
                                 <p class="text-setting-about1-2">Tailored end-to-end solutions to transform your business</p>
@@ -288,7 +288,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex flex-column">
                                 <div class="d-flex align-items-center mb-2">
-                                    <h1><img  class="hetero" src="icons/solution.png"></h1> 
+                                    <h1><img  class="hetero" src="{{asset('website/icons/solution.png')}}"></h1> 
                                     <h5 class="text-truncate m-0 text-setting-about1-2">Solution</h5>
                                 </div>
                                 <p class="m-0 text-setting-about1-2">Tailored end-to-end solutions to transform your business</p>
@@ -297,7 +297,7 @@
                         <div class="col-sm-6">
                             <div class="d-flex flex-column">
                                 <div class="d-flex align-items-center mb-2">
-                                    <h1><img  class="hetero" src="icons/graphic-design.png"></h1> 
+                                    <h1><img  class="hetero" src="{{asset('website/icons/graphic-design.png')}}"></h1> 
                                     <h5 class="text-truncate m-0 text-setting-about1-2">Software Design</h5>
                                 </div>
                                 <p class="m-0 text-setting-about1-2">Tailored end-to-end solutions to transform your business</p>

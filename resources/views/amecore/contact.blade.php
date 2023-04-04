@@ -2,7 +2,7 @@
 
 @section('content')
     <!--Head section -->
-<div class="container-fluid  py-5 bg-header" style="margin-bottom: 90px;background:url(img/camerax.jpg) center center no-repeat;height:35rem;">
+<div class="container-fluid  py-5 bg-header" style="margin-bottom: 90px;background:url({{asset('website/img/camerax.jpg')}}) center center no-repeat;height:35rem;">
     <div class="row py-5 ">
         <div class="col-12 pt-lg-5 mt-lg-5 text-center ">
             <h1 class="display-4 text-white animated zoomIn nunito">Contact Us</h1>

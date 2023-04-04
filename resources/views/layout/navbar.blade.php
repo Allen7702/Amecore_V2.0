@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
    
     <!-- Favicon -->
-    <link href="img/amec.png" rel="icon" type="image/png" sizes="16*16">
+    <link href="{{asset('')}}website/img/amec.png" rel="icon" type="image/png" sizes="16*16">
 
     <!-- Google Web Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"> 
@@ -16,17 +16,17 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
     <!-- Flaticon Font -->
-    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="{{asset('website/lib/flaticon/font/flaticon.css')}}" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="{{asset('website/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{asset('website/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css')}}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="{{asset('website/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('website/css/main.css')}}" rel="stylesheet">
+    <link href="{{asset('website/css/animate.css')}}" rel="stylesheet">
+    <link href="{{asset('website/css/animate.min.css')}}" rel="stylesheet">
 
 
     <!-- JQuery Library -->
@@ -34,10 +34,10 @@
 
       
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <script src="js/readmore.js"></script>
-    <script src="js/wow.js"></script>
-    <script src="js/wow.min.js"></script>
+    <script src="{{asset('website/js/main.js')}}"></script>
+    <script src="{{asset('website/js/readmore.js')}}"></script>
+    <script src="{{asset('website/js/wow.js')}}"></script>
+    <script src="{{asset('website/js/wow.min.js')}}"></script>
 
 
 
@@ -53,7 +53,7 @@
         <nav class="navbar fixed-top navbar-expand-lg   navbar-dark  py-lg-0 px-lg-5 host" >
             <div class="navbar-brand row d-none d-lg-block">
                 <div style="display: flex; flex-direction: row;">
-                  <img src="img/amec.png" alt="" width="40" height="40">
+                  <img src="{{asset('website/img/amec.png')}}" alt="" width="40" height="40">
                   <div class="nunito" style="font-size:30px;font-weight:700;">
                     <span class="text-primary" style="padding-left:10px;">AME</span><span>CORE</span>
                   </div>
