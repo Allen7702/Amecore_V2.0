@@ -15,11 +15,14 @@
     <!-- inject:css -->
     <!-- endinject -->
     <!-- Layout styles -->
-    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('admin/css/style.css')}}">
     @yield('styles')
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{asset('admin/images/favicon.ico')}}" />
+    <!--font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" >
+    <!--Datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
   </head>
@@ -299,22 +302,31 @@
         </div>
         <!-- container-scroller -->
         <!-- plugins:js -->
-        <script src="{{ asset('assets/vendors/js/vendor.bundle.base.js') }}"></script>
+        <script src="{{ asset('admin/vendors/js/vendor.bundle.base.js') }}"></script>
         <!-- endinject -->
         <!-- Plugin js for this page -->
-        <script src="{{ asset('assets/vendors/chart.js/Chart.min.js') }}"></script>
-        <script src="{{ asset('assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('admin/vendors/chart.js/Chart.min.js') }}"></script>
+        <script src="{{ asset('admin/js/jquery.cookie.js') }}" type="text/javascript"></script>
         <!-- End plugin js for this page -->
         <!-- inject:js -->
-        <script src="{{ asset('assets/js/off-canvas.js') }}"></script>
-        <script src="{{ asset('assets/js/hoverable-collapse.js') }}"></script>
-        <script src="{{ asset('assets/js/misc.js') }}"></script>
+        <script src="{{ asset('admin/js/off-canvas.js') }}"></script>
+        <script src="{{ asset('admin/js/hoverable-collapse.js') }}"></script>
+        <script src="{{ asset('admin/js/misc.js') }}"></script>
         <!-- endinject -->
         <!-- Custom js for this page -->
-        <script src="{{ asset('assets/js/dashboard.js') }}"></script>
-        <script src="{{ asset('assets/js/todolist.js') }}"></script>
+        <script src="{{ asset('admin/js/dashboard.js') }}"></script>
+        <script src="{{ asset('admin/js/todolist.js') }}"></script>
         <!-- End custom js for this page -->
+        <script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
         @yield('script')
+
+        <script>
+          $(document).ready(function() {
+            $('#posts-table').DataTable();
+          } );
+        </script>
+
         <script>
            $(document).ready(function(){
           $('#logout-button').click(function(){

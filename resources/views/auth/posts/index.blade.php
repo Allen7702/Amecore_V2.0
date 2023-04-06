@@ -20,7 +20,7 @@
         {{-- <p class="card-description"> Add class <code>.table-striped</code>  </p>--}}
         @if(count($posts)>0)
         <h4 class="card-title">Posts</h4>
-        <table class="table table-striped">
+        <table class="table table-striped" id="posts-table">
             <thead>
               <tr>
                 <th> Image </th>
@@ -35,7 +35,7 @@
                 @foreach($posts as $post)
               <tr>
                 <td class="py-1">
-                  <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
+                  <img src=" {{ $post->gallery->image}}"  alt="image" />
                 </td>
                 <td>{{$post->title}}</td>
                 <td>
@@ -76,3 +76,4 @@
 
 
 @endsection
+
