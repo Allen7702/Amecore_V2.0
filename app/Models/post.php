@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class post extends Model
 {
     use HasFactory;
+    public const published = 1;
+    public const draft = 0;
+
     protected $fillable =['category_id','gallery_id','title','description','is_published'];
 
     public function category(){

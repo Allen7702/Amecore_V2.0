@@ -17,8 +17,7 @@ return new class extends Migration
             $table->foreignId('gallery_id')->constrained();
             $table->string('title');
             $table->text('description');
-            $table->boolean('is_published')->default(false);
-
+            $table->integer('is_published')->default(0);
             $table->timestamps();
         });
     }

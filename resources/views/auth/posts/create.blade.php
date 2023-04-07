@@ -21,6 +21,15 @@
             <input type="text" name="title" class="form-control" id="exampleInputName1" placeholder="Name" value="{{old('title')}}">
           </div>
         
+          <div class="mb-3">
+            <label class="form-label">Published</label>
+            <select name="is_publish" class="form-control">
+                <option selected disabled>Choose Status</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+        
           <div class="form-group">
             <label for="exampleSelectGender">Category
             </label>

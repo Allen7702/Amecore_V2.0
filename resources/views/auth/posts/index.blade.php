@@ -42,7 +42,7 @@
                     {{Str::limit($post->description, 30, '...')}}
                 </td>
                 <td>{{$post->category->name}} </td>
-                <td>{{$post->is_published== 1 ? 'published' : 'Draft' }} </td>
+                <td>{{$post->is_published == 1 ? 'published' : 'Draft' }} </td>
                 <td> 
                     <a href="" class="btn btn-sm btn-success"> <i class="fas fa-eye"></i> </a>
                     <a href="" class="btn btn-sm btn-info"> <i class="fas fa-edit"></i></a>
