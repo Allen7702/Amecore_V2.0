@@ -48,7 +48,7 @@ class PostController extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $name = time().'.'.$image->getClientOriginalName();
-            $destinationPath = public_path('/posts/images');
+            $destinationPath = public_path('/website/img');
             $image->move($destinationPath, $name);
             $gallery->image = $name;
         }
@@ -166,6 +166,7 @@ class PostController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Post::findOrFail($id)->delete();
+        return redirect()->route('post.index');
     }
 }

@@ -3,13 +3,28 @@
 namespace App\Http\Controllers;
 
 use App\Models\booking;
+use App\Models\FeatureSection;
+use App\Models\post;
+use App\Models\Service;
+use App\Models\slider;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
 
     public function home(){
-        return view('amecore.home');
+        $services = Service::all();
+        $sliders= slider::all();
+        $featureSections = FeatureSection::all();
+        $featureHeading = $featureSections->first();
+        $features = $featureSections->slice(1);
+
+        return view('amecore.home',[
+            'services' => $services,
+            'sliders' => $sliders,
+            'features' => $features,
+            'featureHeading' => $featureHeading,
+        ] );
     }
 
     public function contact(){
