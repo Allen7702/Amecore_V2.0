@@ -10,7 +10,7 @@ class slider extends Model
 {
     use HasFactory;
     public $uploads = '/website/img/';
-    protected $fillable =['title','image','description'];
+    protected $fillable =['title_red','title_white','image','description','button_text','show_button'];
     protected function image(): Attribute
     {
         return Attribute::make(

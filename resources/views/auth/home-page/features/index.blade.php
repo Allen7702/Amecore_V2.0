@@ -22,17 +22,26 @@
             @foreach($featureSections as $featureSection)
                 <tr>
                     <td>{{ $featureSection->id }}</td>
+                    @if ($featureSection->main_image && $featureSection->second_image)
                     <td class="py-1">
-                        <img src=" {{ asset ('website/img/'$featureSection->main_image)}}" style="height:70px;width:70px" alt="image" />
+                        <img src=" {{ asset ('website/img/' . $featureSection->main_image)}}" style="height:70px;width:70px" alt="image" />
                       </td>
                       <td class="py-1">
-                        <img src=" {{ $featureSection->second_image}}" style="height:70px;width:70px" alt="image" />
+                        <img src=" {{ asset ('website/img/' . $featureSection->second_image)}}" style="height:70px;width:70px" alt="image" />
                       </td>
+                      @else
+                      <td></td>
+                      <td></td>
+                      @endif
                     <td>{{ $featureSection->heading }}</td>
                     <td>{{ $featureSection->subheading }}</td>
+                    @if($featureSection->icon)
                     <td class="py-1">
-                        <img src=" {{ $featureSection->icon}}" style="height:70px;width:70px" alt="image" />
+                        <img src=" {{ asset ('website/icons/' . $featureSection->icon)}}" style="height:70px;width:70px" alt="image" />
                       </td>
+                      @else
+                      <td></td>
+                      @endif
                     <td>{{ $featureSection->title }}</td>
                     <td>
                         <a href="{{ route('featureSection.edit', $featureSection->id) }}" class="btn btn-sm btn-info">Edit</a>

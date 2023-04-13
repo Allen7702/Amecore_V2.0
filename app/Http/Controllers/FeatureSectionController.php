@@ -15,7 +15,8 @@ class FeatureSectionController extends Controller
     public function index()
     {
         $featureSections = FeatureSection::all();
-        return view('auth.home-page.features.index', compact('featureSections'));    }
+        return view('auth.home-page.features.index', compact('featureSections'));   
+     }
 
     /**
      * Show the form for creating a new resource.
@@ -90,6 +91,7 @@ class FeatureSectionController extends Controller
      */
     public function edit(string $id)
     {
+        $featureSection = FeatureSection::findOrFail($id);
         return view ('auth.home-page.features.create',compact('featureSection'));
     }
 
@@ -98,7 +100,22 @@ class FeatureSectionController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $featureSectionId = $request->featureSection_id;
+        $featureSection = FeatureSection::find($featureSectionId);
+
+        if($featureSection){
+            $featureSection->update([
+                'main_image' => $request->main_image,
+                'second_image' => $request->second_image,
+                'heading' => $request->heading,
+                'subheading' => $request->subheading,
+                'description' => $request->description,
+                'icon' => $request->icon,
+                'title' => $request->title,
+
+            ]);
+        }
+        return redirect()->route('featureSection.index');
     }
 
     /**

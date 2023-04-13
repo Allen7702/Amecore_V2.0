@@ -1,13 +1,49 @@
 @extends('layout.navbar')
 
 @section('content')
-    <!-- Carousel Start -->
+<!-- Carousel Start -->
+<div class="container-fluid p-0 d-none d-lg-block">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+
+       @foreach($sliders as $slider)
+         <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+            <img class="w-100 vh-100" src="{{$slider->image }}" alt="Image">
+            <div class="carousel-caption d-flex flex-column justify-content-center">
+                <div class="pp-3 slide-animation" style="max-width: 900px;">
+                  <h1 class="display-3 text-white mb-3 nunito">
+                    <span class="text-primary">{{ $slider->title_red }}</span>
+                    {{ $slider->title_white }}
+                   </h1>
+                 <h5 class="text-white mb-3 d-none d-sm-block" style="width:600px;">
+                    {{ $slider->description }}
+                 </h5>
+                 @if($slider->show_button)
+                    <a href="#book" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4 mr-3">{{ $slider->button_text }}</a>
+                 @endif
+                 </div>
+             </div>
+         </div>
+        @endforeach
+       </div>
+         <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+             <div class="btn btn-secondary rounded" style="width: 45px; height: 45px;">
+                  <span class="carousel-control-prev-icon mb-n2"></span>
+             </div>
+        </a>
+        <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+             <div class="btn btn-secondary rounded" style="width: 45px; height: 45px;">
+              <span class="carousel-control-next-icon mb-n2"></span>
+             </div>
+        </a>
+    </div>
+</div>
+<!--Carousel End -->
+
+    <!-- Carousel Start 
     <div class="container-fluid p-0 d-none d-lg-block">
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-<!--
-
-            -->
 
             <div class="carousel-item active">
                     <img class="w-100  vh-100 "  src="{{asset('website/img/camerax2.jpg')}}" alt="Image">
@@ -89,34 +125,26 @@
             </a>
         </div>
     </div>
-    <!-- Carousel End -->
+     Carousel End -->
 
     <!-- About Start -->
     
         <div class="container flex-container mb-4" style="margin-top:100px;" id="about">
             <div class="flex-item-1">
-                <h1 class="mb-2 text-setting-1 manrope"> <span class="text-secondary">Transforming for</span><span class="text-primary"> A DIGITAL FUTURE</span></h1>
-                <h6 class="text-setting-2"> At AMECORE, no matter which industry sector you belong to, we understand the challenges that your organisation and your customers face.
-                     We partner with you on your journey to Digital Transformation, so that you can effectively and efficiently solve your customers’ problems, today and in the future.
-                      Our expertise spans the length and breadth of the Information and Communication Technology (ICT) arena – whether you need to migrate to the Cloud or develop
-                       customised Applications.</h6>
-                       {{-- @foreach ($sliders as $slider)
-                       <div class="slider">
-                           <img src="{{ $slider->image }}" alt="{{ $slider->caption }}">
-                           <div class="caption">{{ $slider->title }}</div>
-                       </div>
-                   @endforeach --}}
+                @php
+                $firstSection = $aboutSections->first();
+            @endphp
+                <h1 class="mb-2 text-setting-1 manrope"> <span class="text-secondary">{{$firstSection->title_primary }}</span><span class="text-primary"> {{$firstSection->title_sec}}</span></h1>
+               @foreach($aboutSections as $section)
+                <h6 class="text-setting-2 text-dark"> {!! $section->description !!}</h6>
+                @endforeach    
             </div>
             <div class="flex-item-2 ">
-                
-                        <img class="image-setting" src="{{asset('website/img/net.jpg')}}" alt="">
+                        <img class="image-setting" src="{{asset('website/img/' .  $firstSection->image )}}" alt="">
             </div>
         </div>
    
     <!-- About End -->
-
-<!--Start service -->
-
 
 
 
@@ -131,10 +159,10 @@
             <div class="flex-container-1">
                 @foreach($services->take(3) as $service)
                 <div class="mb-4 mr-5">
-                    <div class="d-flex flex-column text-center bg-white mb-2 pp-3 p-sm-5 ball-item">
+                    <div class="card text-center bg-dark p-4 ball-item">
                         <h3 class="mt-4"><img class="hetero" src="{{ asset('website/icons/' . $service->image) }}"></h3>
-                        <h3 class="mb-3">{{ $service->title }}</h3>
-                        <p>{{ $service->description }}</p>
+                        <h3 class="card-text mb-3 text-white" >{{ $service->title }}</h3>
+                        <p class="text-white">{{ $service->description }}</p>
                         {{-- <a class="text-uppercase font-weight-bold" href="#"  onclick="toggleText(this); return false;">Read More</a> --}}
 
                     </div>
@@ -145,10 +173,10 @@
             <div class="flex-container-1">
                 @foreach($services->skip(3) as $service)
                 <div class="mb-4 mr-5">
-                    <div class="d-flex flex-column text-center bg-white mb-2 pp-3 p-sm-5 ball-item">
+                    <div class="card text-center bg-dark p-4 ball-item">
                         <h3 class="mt-4"><img class="hetero" src="{{ asset('website/icons/' . $service->image) }}"></h3>
-                        <h3 class="mb-3">{{ $service->title }}</h3>
-                        <p>{{ $service->description }}</p>
+                        <h3 class="mb-3 text-white">{{ $service->title }}</h3>
+                        <p class="text-white">{{ $service->description }}</p>
                     </div>
                 </div>
                 @endforeach
@@ -194,15 +222,7 @@
                 
                     <div class="bg-primary  form-setting" >
                       <a name="form-top"></a>
-                      <?php if (isset($_GET['success']) && $_GET['success'] == 1) { ?>
-                        <div class="success-message1"><strong>Your message has been sent. </strong></div>
-                       <script>
-                         // Hide the success message after 5 seconds
-                          setTimeout(function() {
-                          document.querySelector('.success-message1').remove();
-                         }, 5000);
-                     </script>
-                       <?php } ?>
+            
                         <form class="py-5" method="POST"  action ="/home" >
                         @csrf
                             <div class="form-group">
@@ -236,8 +256,36 @@
                             </div>
                         </form>
                     </div>
+
+                  
+                    <div class="pl-5">
+                @if($bookingSections->count() > 0)
+                    @php
+                        $firstContent = $bookingSections->first();
+                    @endphp
+                    <h4 class="text-secondary mb-3 text-setting-about1-2">{{ $firstContent->section_title }}</h4>
+                    <h1 class="display-4 mb-4">{{ $firstContent->section_subtitle }} </h1>
+                    <p class="text-setting-about1-2">{{ $firstContent->section_description }}</p>
+                    
+                    <div class="row py-2">
+                        @foreach($bookingSections as $content)
+                            <div class="col-sm-6">
+                                <div class="d-flex flex-column">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <h1><img class="hetero" src="{{ asset('website/icons/' . $content->icon_path) }}"></h1>
+                                        <h5 class="text-truncate m-0 text-setting-about1-2">{{ $content->icon_title }}</h5>
+                                    </div>
+                                    <p class="text-setting-about1-2">{{ $content->icon_description }}</p>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                @endif
+                </div>
+                
+
                
-                <div class="pl-5">
+                {{-- <div class="pl-5">
                     <h4 class="text-secondary mb-3 text-setting-about1-2">In need of a solution?</h4>
                     <h1 class="display-4 mb-4">Book <span class="text-primary">Now!</span></h1>
                     <p class="text-setting-about1-2">Get the best service for your business from the very best! At Amecore, our customers are our priority.</p>
@@ -279,7 +327,7 @@
                             </div>
                         </div>
                     </div>
-                
+                 --}}
             </div>
        
     </div>

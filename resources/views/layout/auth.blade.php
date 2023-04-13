@@ -145,7 +145,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/icons/mdi.html">
+              <a class="nav-link" href="{{route('slider.index')}}">
                 <span class="menu-title">Sliders</span>
                 <i class="mdi mdi-contacts menu-icon"></i>
               </a>
@@ -158,10 +158,10 @@
               </a>
               <div class="collapse" id="general-pages">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="{{route('post.create')}}"> About Company</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{route('aboutSection.index')}}"> About Company</a></li>
                   <li class="nav-item"> <a class="nav-link" href="{{route('service.index')}}"> Services </a></li>
                   <li class="nav-item"> <a class="nav-link" href="{{route('featureSection.index')}}"> Features </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="{{route('post.index')}}"> Subscription </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{route('bookingSection.index')}}"> Booking Section </a></li>
                 </ul>
               </div>
             </li>

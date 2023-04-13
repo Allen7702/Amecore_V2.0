@@ -47,7 +47,7 @@
                       <i class="fas fa-edit"></i>
                   </a>
 
-              <form method="POST" class="inner" action="{{ route('service.destroy', $service->id) }}">
+              <form method="POST" class="d-inline"   action="{{ route('service.destroy', $service->id) }}">
                   @csrf
                   @method('delete')
                   <button type="submit" class="btn btn-sm btn-danger"> <i class="fas fa-trash"></i> </button>

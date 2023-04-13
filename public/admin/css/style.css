@@ -14450,7 +14450,6 @@ dl {
 /*# sourceMappingURL=style.css.map */
 
 
-.inner
-{
-    display: inline-block;
+.text-red{
+  color:red;
 }

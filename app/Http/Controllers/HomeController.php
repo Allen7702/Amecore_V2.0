@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AboutSection;
 use App\Models\booking;
+use App\Models\BookingSection;
 use App\Models\FeatureSection;
 use App\Models\post;
 use App\Models\Service;
@@ -18,12 +20,16 @@ class HomeController extends Controller
         $featureSections = FeatureSection::all();
         $featureHeading = $featureSections->first();
         $features = $featureSections->slice(1);
+        $bookingSections = BookingSection::all();
+        $aboutSections = AboutSection::all();
 
         return view('amecore.home',[
             'services' => $services,
             'sliders' => $sliders,
             'features' => $features,
             'featureHeading' => $featureHeading,
+            'bookingSections' => $bookingSections,
+            'aboutSections' => $aboutSections,
         ] );
     }
 

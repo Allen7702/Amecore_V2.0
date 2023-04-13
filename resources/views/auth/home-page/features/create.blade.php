@@ -1,7 +1,14 @@
 @extends('layout.auth')
 
 @section('content')
-    <div class="container">
+<div class="main-panel">
+    <div class="content-wrapper">
+          
+     <div class="col-12 grid-margin stretch-card">
+       <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Update Feature</h4>
+          <p class="card-description"> Basic form elements </p>
         <h1>Add New Feature Section</h1>
         <form action="{{ route('featureSection.store') }}" method="POST"  enctype="multipart/form-data">
             @csrf
@@ -32,4 +39,8 @@
             <button type="submit" class="btn btn-primary">Add Feature Section</button>
         </form>
     </div>
+</div>
+</div>
+</div>
+</div>
 @endsection

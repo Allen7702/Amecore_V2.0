@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Database\Seeders\BookingSectionSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -25,6 +26,8 @@ class DatabaseSeeder extends Seeder
            SliderSeeder::class, 
            ServiceSeeder::class,
            FeatureSectionSeeder::class,
+           BookingSectionSeeder::class,
+           AboutSectionSeeder::class,
         ]);
     }
 }
