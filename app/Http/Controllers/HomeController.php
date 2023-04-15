@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\AboutSection;
 use App\Models\booking;
 use App\Models\BookingSection;
+use App\Models\contact;
 use App\Models\FeatureSection;
 use App\Models\post;
 use App\Models\Service;
@@ -34,13 +36,25 @@ class HomeController extends Controller
     }
 
     public function contact(){
-        return view('amecore.contact');
+         $contacts = contact::all();
+        $firstSection = $contacts->first();
+
+        return view('amecore.contact',[
+             'contacts' => $contacts,
+            'firstSection' => $firstSection,
+        ]);
     }
 
     public function about(){
+        $abouts = About::all();
+        $services = Service::all();
+        $firstSection = $abouts->first();
+        return view('amecore.about',[
+            'services' => $services,
+            'abouts'=> $abouts,
+            'firstSection'=>$firstSection,
 
-       
-        return view('amecore.about');
+        ]);
     }
 
     public function solution(){

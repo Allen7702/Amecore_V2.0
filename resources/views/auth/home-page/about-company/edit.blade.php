@@ -20,7 +20,7 @@
     
             <div class="form-group">
                 <label for="title_white">Title Primary</label>
-                <input type="text" class="form-control" id="title_primary" name="title_white" value="{{ $aboutSection->title_primary}}" >
+                <input type="text" class="form-control" id="title_primary" name="title_primary" value="{{ $aboutSection->title_primary}}" >
             </div>
     
             <div class="form-group">

@@ -11,7 +11,7 @@
    <div class="col-12 grid-margin stretch-card">
      <div class="card">
       <div class="card-body">
-        <h4 class="card-title">About Sectio</h4>
+        <h4 class="card-title">About Section</h4>
 
         <form action="{{ route('aboutSection.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -22,8 +22,8 @@
             </div>
 
             <div class="form-group">
-                <label for="title_white">Title Secondary</label>
-                <input type="text" name="title_secondary" id="title_white" class="form-control" >
+                <label for="title_sec">Title Secondary</label>
+                <input type="text" name="title_sec" id="title_sec" class="form-control" >
             </div>
 
             <div class="form-group">

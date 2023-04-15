@@ -28,6 +28,8 @@ class DatabaseSeeder extends Seeder
            FeatureSectionSeeder::class,
            BookingSectionSeeder::class,
            AboutSectionSeeder::class,
+           AboutSeeder::class,
+           ContactSeeder::class,
         ]);
     }
 }

@@ -13,9 +13,15 @@ return new class extends Migration
     {
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('description');
-            $table->string('image');
+            $table->string('title')->nullable();
+            $table->string('title_image')->nullable();
+            $table->string('heading')->nullable();
+            $table->string('description')->nullable();
+            $table->string('icon_name');
+            $table->string('icon');
+            $table->string('image')->nullable();
+            $table->string('button_text')->nullable();
+            $table->boolean('show_button')->default(true);
             $table->timestamps();
         });
     }

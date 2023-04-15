@@ -33,12 +33,9 @@ class AboutSectionController extends Controller
             'title_primary' => $request->input('title_primary'),
             'title_sec' => $request->input('title_sec'),
             'description' => $request->input('description'),
-           
         ]);
     
-        // Save the image
-       // $imagePath = $request->file('image')->store('public/website/img');
-       // $aboutSection->image = Storage::url($imagePath);
+       
        if ($request->hasFile('image')) {
         $image = $request->file('image');
         $name = time().'.'.$image->getClientOriginalName();
@@ -58,7 +55,7 @@ class AboutSectionController extends Controller
      */
     public function show(string $id)
     {
-        $aboutSection = aboutSection::findOrFail($id);
+        $aboutSection = AboutSection::findOrFail($id);
         return view('auth.home-page.about-company.show', compact('aboutSection'));    }
 
     /**
@@ -66,7 +63,7 @@ class AboutSectionController extends Controller
      */
     public function edit(string $id)
     {
-        $aboutSection = aboutSection::findOrFail($id);
+        $aboutSection = AboutSection::findOrFail($id);
     return view('auth.home-page.about-company.edit', compact('aboutSection'));
     }
 
@@ -76,8 +73,7 @@ class AboutSectionController extends Controller
     public function update(Request $request, string $id)
     {
        
-        $aboutSection = aboutSection::findOrFail($id);
-    
+        $aboutSection = AboutSection::findOrFail($id);
         $aboutSection->title_primary = $request->input('title_primary');
         $aboutSection->title_sec = $request->input('title_sec');
         $aboutSection->description = $request->input('description');

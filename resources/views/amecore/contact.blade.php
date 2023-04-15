@@ -2,10 +2,10 @@
 
 @section('content')
     <!--Head section -->
-<div class="container-fluid  py-5 bg-header" style="margin-bottom: 90px;background:url({{asset('website/img/camerax.jpg')}}) center center no-repeat;height:35rem;">
+<div class="container-fluid  py-5 bg-header" style="margin-bottom: 90px;background:url({{asset('website/img/' . $firstSection->title_image)}}) center center no-repeat;height:35rem;">
     <div class="row py-5 ">
         <div class="col-12 pt-lg-5 mt-lg-5 text-center ">
-            <h1 class="display-4 text-white animated zoomIn nunito">Contact Us</h1>
+            <h1 class="display-4 text-white animated zoomIn nunito">{{$firstSection->title}}</h1>
             <a href="" class="h5 text-white nunito">Home</a>
             <i class="far fa-circle text-white px-2"></i>
             <a href="" class="h5 text-white nunito">Contact</a>
@@ -18,21 +18,24 @@
      <div class="container-fluid py-5 wow fadeInUp" style="max-width:90%" data-wow-delay="0.1s" >
         
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto " style="max-width: 750px;">
-                <h5 class="fw-bold text-primary text-uppercase nunito">Contact Us</h5>
-                <h1 class="mb-0 text-setting-about-1 nunito">If You Have Any Query, Feel Free To Contact Us</h1>
+                <h5 class="fw-bold text-primary text-uppercase nunito">{{$firstSection->title}}</h5>
+                <h1 class="mb-0 text-setting-about-1 nunito">{{$firstSection->heading}}</h1>
             </div>
             <div class="flex-container mb-5 ps ml-lg-5" >
-                <div class="">
+                @foreach($contacts as $contact)
+               <div class="">
                     <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.1s">
                         <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
                             <i class="fa fa-phone-alt text-white"></i>
                         </div>
                         <div class="ps-4 mb-2 ml-4 ">
-                            <h5 class="mb-2">Call to ask any question</h5>
-                            <h4 class="text-primary mb-0">+255 713 999 934</h4>
+                            <h5 class="mb-2">{{$contact->icon_name}}</h5>
+                            <h4 class="text-primary mb-0">{{$contact->description}}</h4>
                         </div>
                     </div>
                 </div>
+                @endforeach
+                  {{--
                 <div class="">
                     <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.4s">
                         <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
@@ -54,7 +57,7 @@
                             <h4 class="text-primary mb-0">Mwai Kibaki Road,Mikocheni</h4>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
             <div class="row g-5">
                 <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">

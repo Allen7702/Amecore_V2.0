@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class AboutSection extends Model
 {
     use HasFactory;
-    protected $fillable =['title','description','image'];
+    protected $fillable =['title_primary','title_sec','description','image'];
 }
